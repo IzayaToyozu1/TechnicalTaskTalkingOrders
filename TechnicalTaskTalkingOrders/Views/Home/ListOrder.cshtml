@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TechnicalTaskTalkingOrders.Models.Order>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформления заказа</h3>
+        <p>Для оформления заказ заполните следующие поля:</p>
+        <table>
+            <tr>
+                <td>Номер заказа:</td>
+                <td>Город отправителя:</td>
+                <td>Адрес отправителя:</td>
+                <td>Город получателя:</td>
+                <td>Адрес получателя:</td>
+                <td>Вес груза:</td>
+                <td>Дата получения:</td>
+            </tr>
+            @foreach(var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.SenderCity</td>
+                    <td>@order.SenderAddress</td>
+                    <td>@order.RecipientCity</td>
+                    <td>@order.RecipientAddress</td>
+                    <td>@order.CargoWeight</td>
+                    <td>@order.PickUpDate.ToLongDateString()</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+

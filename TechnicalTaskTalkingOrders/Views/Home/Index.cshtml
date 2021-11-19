@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформления заказа</h3>
+        <p>Для оформления заказ заполните следующие поля:</p>
+        <form asp-action="AddOrder" method="post">
+            <table>
+                <tr>
+                    <td>Город отправителя:</td>
+                    <td><input type="text" name="SenderCity" /></td>
+                </tr>
+                <tr>
+                    <td>Адрес отправителя:</td>
+                    <td><input type="text" name="SenderAddress" /></td>
+                </tr>
+                <tr>
+                    <td>Город получателя:</td>
+                    <td><input type="text" name="RecipientCity" /></td>
+                </tr>
+                <tr>
+                    <td>Адрес получателя:</td>
+                    <td><input type="text" name="RecipientAddress" /></td>
+                </tr>
+                <tr>
+                    <td>Адрес получателя:</td>
+                    <td><input type="text" name="CargoWeight" /></td>
+                </tr>
+                <tr>
+                    <td>Адрес получателя:</td>
+                    <td><input type="date" name="PickUpDate" /></td>
+                </tr>
+                <tr>
+                <td>
+                    <a href="~/Home/ListOrder/"/><input type="submit" value="Отправить" />
+                    </td>
+                <td>
+                    </td>
+                </tr>
+                
+            </table>
+            </form>
+    </div>
+</body>
+</html>
